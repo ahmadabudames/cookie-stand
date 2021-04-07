@@ -290,7 +290,9 @@ function NameOfCookies(location, min, max, avg) {
 NameOfCookies.prototype.main = function () {
     for (let i = 0; i < hours.length; i++) {
         this.cookiesPiarHour.push(getRandomInt(this.min, this.max));
+        this.cookiesPiarHour.push( this.avg );
         console.log(this.cookiesPiarHour);
+      
     }
 }
  
@@ -339,7 +341,7 @@ function mkHeader(){
    rowOfhead.appendChild(th2);
    th2.textContent='daily location total';
 
-
+}
    NameOfCookies.prototype.tableRender=function(){
        let rowOfStore=document.createElement('tr');
        table.appendChild(rowOfStore);
@@ -353,7 +355,10 @@ function mkHeader(){
           let tdOfCookies=document.createElement('td');
           rowOfStore.appendChild(tdOfCookies);
           tdOfCookies.textContent=this.cookiesPiarHour[i];
+
+           this.total=Math.floor(this.total+this.cookiesPiarHour[i]);
            
+
        }
        let tdOfTotal=document.createElement('td');
        rowOfStore.appendChild(tdOfTotal);
@@ -362,7 +367,7 @@ function mkHeader(){
    }
    
 
-}
+
 mkHeader();
 for (let i = 0; i < Cookies.length; i++) {
 // Cookies[i].cookiesPiarHour();
@@ -384,17 +389,19 @@ function mkFooter(){
      totalOfHour=0;
      for (let y = 0; y < Cookies.length; y++) {
          
-         totalOfHour+=Cookies[y].cookiesPiarHour;
-         Mtotal+=Cookies[y].cookiesPiarHour;  
+         totalOfHour+=Cookies[y].cookiesPiarHour[i];
+         Mtotal+=Cookies[y].cookiesPiarHour[i];  
          
      }
        let thOfFooter=document.createElement('th');
        rowOfFooter.appendChild(thOfFooter);
-    //    thOfFooter.textContent=totalOfHour;
+       console.log(totalOfHour);
+       thOfFooter.textContent=totalOfHour;
    }
    let thOfTotal=document.createElement('th');
    rowOfFooter.appendChild(thOfTotal);
-   thOfTotal.textContent=Mtotal;
+//    thOfTotal.textContent=Mtotal;
+
 }
 mkFooter();
 
