@@ -1,0 +1,67 @@
+
+header{
+    background-color:black ;
+    color: whitesmoke;
+    margin: 0%;
+    
+}
+h1{
+text-align: center;
+}
+button{
+width: 150px;
+}
+a{
+    color: black;   
+    text-decoration: none;
+}
+#family{
+    position: relative;
+    text-align: center;
+    background-color: whitesmoke;
+}
+#seattle{
+    float: left;
+    background-color: wheat;
+    text-align: center;
+
+}
+section #img1{
+    float: right;
+    position: relative;
+}
+#tokyo{
+    float: right;
+    background-color: wheat;
+    text-align: center;
+    
+}
+#dubai{
+    float: left;
+    background-color: turquoise;
+    text-align: center;
+}
+#lima{
+    float: left;
+    background-color: wheat;
+    text-align: center;
+}
+#paris{
+    float: right;
+    background-color: wheat;
+    text-align: center;
+    
+
+}
+#paris img{
+    
+    width: 70%;
+    height: 70%;
+}
+#lima img{
+   
+    width: 300px;
+    height: 300px;
+}
+
+
